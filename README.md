@@ -1,3 +1,8 @@
+# customized module for "通讯录"
+
+forked from <https://github.com/rgovindji/react-native-atoz-list>
+
+
 This package is just a fork of the work of brentvatne: https://github.com/brentvatne/fixed-height-windowed-list-view-experiment
 
 I fixed some issues with the scrolling not working correctly and exposed the main listview component as AtoZList.
