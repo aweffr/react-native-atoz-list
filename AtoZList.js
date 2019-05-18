@@ -34,7 +34,7 @@ export default class AtoZList extends Component {
     renderCell: PropTypes.func,
     renderSection: PropTypes.func,
     onEndReached: PropTypes.func,
-    onScroll: PropTypes.func,
+    peoples: PropTypes.array
   };
 
   constructor(props, context) {
@@ -87,13 +87,13 @@ export default class AtoZList extends Component {
             renderCell={this.props.renderCell}
             renderSectionHeader={this.props.renderSection}
             incrementDelay={16}
-            initialNumToRender={8}
+            initialNumToRender={12}
             pageSize={Platform.OS === 'ios' ? 15 : 8}
             maxNumToRender={70}
             numToRenderAhead={40}
             numToRenderBehind={4}
             onEndReached={this.props.onEndReached}
-            onScroll={this.props.onScroll}
+            item={this.props.item}
           />
         </View>
         {this._alphabetInstance}
@@ -118,7 +118,7 @@ const styles = StyleSheet.create({
   alphabetSidebar: {
     position: 'absolute',
     backgroundColor: 'transparent',
-    top: 0,
+    top: -70,
     bottom: 0,
     right: 0,
     justifyContent: 'center',

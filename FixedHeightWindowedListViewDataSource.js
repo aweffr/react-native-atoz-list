@@ -182,7 +182,7 @@ class FixedHeightListViewDataSource {
    */
   getHeightBetweenRows(i, ii) {
     if (ii < i) {
-      console.warn('provide the lower index first');
+      // console.warn('provide the lower index first');
     }
 
     return this.getHeightBeforeRow(ii) - this.getHeightBeforeRow(i + 1);
